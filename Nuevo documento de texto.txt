@@ -1,0 +1,14 @@
+<div class="celdas">
+                        <div class="input-field col s5">
+                            <input type="tel" class="validate" id="nombre_participante_1" name="nom_participante" required>
+                            <label for="nombre_participante_1">Participante</label>
+                        </div>
+                        <div class="input-field col s5">
+                            <input type="tel" class="validate" id="cel_participante_1" maxlength="10" required>
+                            <label for="cel_participante_1">Número de celular</label>
+                        </div>
+                        <div class="input-field col s2" id="eliminar">
+                            <a class="btn-floating btn-midium waves-effect waves-light eliminar valign-wrapper" ><i class="material-icons">clear</i></a>
+                        </div>
+                        
+                    </div>

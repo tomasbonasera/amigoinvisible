@@ -1,0 +1,125 @@
+body{
+    overflow-x: hidden;
+}
+
+/*******INDEX*******/
+
+#fondo-perfil{
+    width: auto;
+    height: 150%;
+}
+.sidenav{
+    background-color: #333333;
+    /*overflow: hidden;*/
+}
+.divider{
+    opacity: 20%;
+}
+#copy{
+    margin-top: 115%;
+}
+
+/*HEADER*/
+#header{
+    background-color: #5ADDFF;
+    height: 25rem;
+    border-bottom-right-radius: 10rem;
+    margin-bottom: 5%;
+}
+#sidenav-trigger{
+    margin-top: 5%;
+    margin-left: 5%;
+}
+#isotipo{
+    margin-left: 25%;
+}
+#titulo p{
+    color: #707070;
+    font-size: 30px;
+    font-family: Arial Rounded MT;
+    font-weight: bold;
+}
+#amigo_inicio{
+    margin-left: -25%;
+}
+#invisible_inicio{
+    opacity: 0.5;
+    margin-top: -10%;
+}
+
+/*SECTION: Botones nuevo sorteo/regalo*/
+#botones-nuevo{
+    margin-left: 12%;
+    margin-bottom: 10%;
+}
+/*SECTION: Circulos rojos*/
+#circulo-derecha{
+    background-color: red;
+    opacity: 0.5;
+    border-radius: 100%;
+    width: 10rem;
+    height: 10rem;
+    margin-left: 80%;
+    margin-top: -10%;
+    
+}
+#circulo-derecha a{
+    visibility: hidden;
+}
+#imagen-circulos{
+    margin-left: 75.2%;
+    margin-bottom: -17.9%;
+}
+
+#imagen-circulos-funciona{
+    margin-left: 75.2%;
+    margin-bottom: -1.5%;
+}
+#imagen-circulos-regalo{
+    margin-left: 77.1%;
+    margin-bottom: -1.2%;
+}
+
+/*******AMIGO INVISIBLE*******/
+#seccion-participantes span{
+    font-size: 25px;
+    padding-left: 5%;
+}
+#seccion-participantes fieldset{
+    border: none;
+}
+#eliminar{
+    width: 11.5%;
+}
+#nombre_participante{
+    margin-right: 1%;
+}
+#cel_participante{
+    margin-right: 1%;
+}
+#agregar{
+    margin-left: 3%;
+    margin-top: 5%;
+}
+#siguiente-a-invisible{
+    margin-top: 5%;
+    margin-left: 50%;
+}
+
+/*******COMO FUNCIONA*******/
+#descripcion{
+    padding-right: 5%;
+    padding-left: 5%;
+}
+
+/*******SORTEO RAPIDO*******/
+#seccion-sorteo-rapido span{
+    font-size: 25px;
+    padding-left: 5%;
+}
+#fila-sorteo{
+    display: none;
+}
+#boton-hacer-sorteo{
+    margin-left: 2%;
+}

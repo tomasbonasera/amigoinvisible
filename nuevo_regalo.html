@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- MATERIALIZE -->
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+    <!-- ADICIONALES -->
+    <!-- Scripts adicionales -->
+    <script src="script.js"></script>
+
+    <script src ="jquery-3.4.1.min.js"></script>
+
+    <!-- Estilos adicionales -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body style="max-width: 97.6%;">
+    <header id="header" style="width: 102.5%;">
+        <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons white-text" id="sidenav-trigger">menu</i></a>
+        <div>
+            <img src="img/Logo1.png" id="isotipo">
+        </div>
+        <div id="titulo">
+            <p class="center-align" id="amigo_inicio">AMIGO</p>
+            <p class="center-align" id="invisible_inicio">INVISIBLE</p>
+        </div>
+    </header>
+    <!--Formulario-->
+    <!--Seccion 1: Datos del sorteo-->
+    <section>
+        <div class="row">
+            <form class="col s12">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="nombre_sorteo" type="text" class="validate" maxlength="30">
+                        <label for="nombre_sorteo">Nombre del sorteo</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input type="text" class="datepicker_fecha_inicio" id="fecha_inicio" required>
+                        <label for="fecha_inicio">Fecha de inicio</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input type="text" class="datepicker_fecha_fin" id="fecha_fin" required>
+                        <label for="fecha_fin">Fecha de fin</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <textarea id="textarea1" class="materialize-textarea"></textarea>
+                        <label for="textarea1">Mensaje para los participantes</label>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+    <!--Seccion 2: Participantes-->
+    <section id="seccion-participantes">
+        <span>Participantes</span>
+        <div class="row">
+            <form class="col s12">
+                <fieldset>
+                    <!--Renglon 1-->
+                    <div class="celdas">
+                        <input type="text" class="input-field col s5 validate" id="nombre_participante" name="nom_participante" required placeholder="Participante">
+                        <input type="tel" class="input-field col s5 validate" id="cel_participante" maxlength="10" required placeholder="Número de celular">
+                        <a class="col s2 btn-floating btn-midium waves-effect waves-light eliminar" id="eliminar"><i class="material-icons">clear</i></a> 
+                    </div>
+                </fieldset>
+                <div id="botones-agregar-siguiente">
+                    <a class="btn-floating btn-large waves-effect waves-light" id="agregar"><i class="material-icons">add</i></a>
+                    <a class="waves-effect btn" id="siguiente-a-invisible">Siguiente</a>
+                </div>
+            </form>
+        </div>
+    </section>
+    
+    <img src="img/Circulos.png" id="imagen-circulos-regalo">
+
+    <!--Barra de navegacion vertical-->
+    <ul id="slide-out" class="sidenav">
+        <li><div class="user-view">
+            <div class="background">
+            <img src="img/fondo-perfil.jfif" id="fondo-perfil">
+            </div>
+            <a href="#user"><img class="circle responsive-img" src="img/foto-perfil.jpg"></a>
+            <a href="#name"><span class="white-text name">Tomas Bonasera</span></a>
+            <a href="#email"><span class="white-text email">example@gmail.com</span></a>
+        </div></li>
+        <li><a href="index.html" class="white-text ">Inicio</a></li>
+        <li><div class="divider"></div></li>
+        <li><a href="nuevo_regalo.html" class="white-text ">Amigo invisible</a></li>
+        <li><div class="divider"></div></li>
+        <li><a href="sorteo_rapido.html" class="white-text ">Sorteo rápido</a></li>
+        <li><div class="divider"></div></li>
+        <li><a href="como_funciona.html" class="white-text ">¿Cómo funciona?</a></li>
+        <li><div class="divider"></div></li>
+        <li><a href="#!" class="white-text ">Ayudenos</a></li>
+        <li><div class="divider"></div></li>
+        <!--Copyright-->
+        <ul id="copy">
+        <li><div class="divider"></div></li>
+        <li><a href="#!" class="grey-text center-align small"><h6>Todos los derechos reservados ©2021</h6></a></li>
+        <li><a href="#!" class="grey-text center-align">Version 1.0.0</a></li></ul>
+    </ul>
+
+
+    <!--Script para clonar el formulario-->
+    <script>
+        $(document).ready(function(){
+              $("#agregar").click(function(){
+                var formClonado = $(".celdas").last();
+                var clon = $(".celdas").first().clone();
+                $(clon).children().val("");
+                $(clon).clone().insertAfter(formClonado);
+              })
+        });
+
+        $(document).on("click",".eliminar",function(){
+            var padre = $(this).parent();
+            var formClonado = $(".celdas").first();
+            if(!padre.is(formClonado)){
+                padre.remove();
+            }else{
+                padre.children().val("");
+            }
+        });
+    </script>
+</body>
+</html>
