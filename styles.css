@@ -105,6 +105,12 @@ body{
     margin-top: 5%;
     margin-left: 50%;
 }
+#aclaracion-ai{
+    font-size: 10px;
+    color: gray;
+    opacity: 80%;
+    margin-top: -5px;
+}
 
 /*******COMO FUNCIONA*******/
 #descripcion{
@@ -117,9 +123,9 @@ body{
     font-size: 25px;
     padding-left: 5%;
 }
-#fila-sorteo{
+/*#fila-sorteo{
     display: none;
-}
+}*/
 #boton-hacer-sorteo{
     margin-left: 2%;
 }

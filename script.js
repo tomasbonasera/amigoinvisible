@@ -16,3 +16,14 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
 //Sorteo rapido
+function aleatorio(minimo,maximo){
+  return Math.round(Math.random()*(maximo-minimo)+parseInt(minimo));
+}
+
+function hacerSorteo(){
+  var minimo = document.getElementById("numero_inicio").value;
+  var maximo = document.getElementById("numero_fin").value;
+
+  var ganador = aleatorio(minimo,maximo);
+  document.getElementById('numero_ganador').value = 'El número ganador es: '+ganador;
+}
