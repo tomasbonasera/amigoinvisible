@@ -39,7 +39,7 @@
     <!--Seccion 1: Datos del sorteo-->
     <section>
         <div class="row">
-            <form class="col s12">
+            <form class="col s12" action="#" onsubmit="return validacionDeCampos()">
                 <div class="row">
                     <div class="input-field col s12">
                         <input id="nombre_sorteo" type="text" class="validate" maxlength="30" required>
@@ -63,14 +63,12 @@
                         <p id="aclaracion-ai">Opcional</p>
                     </div>
                 </div>
-            </form>
         </div>
     </section>
     <!--Seccion 2: Participantes-->
     <section id="seccion-participantes">
         <span>Participantes</span>
         <div class="row">
-            <form class="col s12">
                 <fieldset>
                     <!--Renglon 1-->
                     <div class="celdas">
@@ -81,7 +79,7 @@
                 </fieldset>
                 <div id="botones-agregar-siguiente">
                     <a class="btn-floating btn-large waves-effect waves-light" id="agregar"><i class="material-icons">add</i></a>
-                    <a class="waves-effect btn" id="siguiente-a-invisible">Siguiente</a>
+                    <button class="btn waves-effect waves-light" type="submit" name="action" id="siguiente-a-invisible">Siguiente</button>
                 </div>
             </form>
         </div>
@@ -96,7 +94,7 @@
             <img src="img/fondo-perfil.jfif" id="fondo-perfil">
             </div>
             <a href="#user"><img class="circle responsive-img" src="img/foto-perfil.jpg"></a>
-            <a href="#name"><span class="white-text name">Tomas Bonasera</span></a>
+            <a href="#name"><span class="white-text name">Example</span></a>
             <a href="#email"><span class="white-text email">example@gmail.com</span></a>
         </div></li>
         <li><a href="index.html" class="white-text ">Inicio</a></li>
