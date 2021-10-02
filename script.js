@@ -30,41 +30,47 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 //Validacion de campos
 var expresionRegularCelular =  /[0-9]{9}/;// /^\d{9}$/; // /^[0-9]{9}$/;
+var error = false;
 
 function validacionDeCampos(){
-  var nombreSorteo = document.getElementById("nombre_sorteo").value;
-  var fechaInicio = document.getElementById("fecha_inicio").value;
-  var fechaFin = document.getElementById("fecha_fin").value;
-  var nombreParticipante = document.getElementById("nombre_participante").value;
-  var telParticipante = document.getElementById("cel_participante").value;
+  var nombreSorteo = document.getElementById('nombre_sorteo').value;
+  var fechaInicio = document.getElementById('fecha_inicio').value;
+  var fechaFin = document.getElementById('fecha_fin').value;
+  var nombreParticipante = document.getElementById('nombre_participante').value;
+  var telParticipante = document.getElementById('cel_participante').value;
 
-  //El nombre del sorteo no puede estar vacio
-  if(!nombreSorteo.value){
-    nombreSorteo.focus();
+  //Campos vacios
+    //Nombre del sorteo
+  if(nombreSorteo == ''){
+    document.getElementById('nombre_sorteo').focus();
     return false;
   }
-  
-  //Las fechas de inicio y fin no pueden estar vacias
-  if(!fechaInicio.value){
-    fechaInicio.focus();
+    //Fechas de inicio y fin
+  if(fechaInicio == ''){
+    document.getElementById('fecha_inicio').focus();
     return false;
   }
-  if(!fechaFin.value){
-    fechaFin.focus();
+  if(fechaFin == ''){
+    document.getElementById('fecha_fin').focus();
     return false;
   }
 
-  //Los datos del participante no pueden estar vacios
-  if(!nombreParticipante.value){
-    nombreParticipante.focus();
+    //Datos de los participantes
+  if(nombreParticipante == ''){
+    document.getElementById('nombre_participante').focus();
     return false;
   }
-  if(!telParticipante.value){
-    telParticipante.focus();
+  if(telParticipante == ''){
+    document.getElementById('cel_participante').focus();
     return false;
   }
 
   //Validacion del formato del celular
-  
+  /*if(!expresionRegularCelular.test(document.getElementById('cel_participante').value)){
+    alert("error");
+    return false;
+  }*/
+  var astring = nombreSorteo+' con '+nombreParticipante+' con '+telParticipante+' como participante se realiza del dia '+fechaInicio+' hasta el '+fechaFin;
+  alert(astring);
   
 }
