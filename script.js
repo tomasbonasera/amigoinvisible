@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var instances = M.Datepicker.init(elems);
   });
 //Validacion de campos
-let expresionRegularCelular = /^[0-9]{9}$/;
+var expresionRegularCelular =  /[0-9]{9}/;// /^\d{9}$/; // /^[0-9]{9}$/;
 
 function validacionDeCampos(){
   var nombreSorteo = document.getElementById("nombre_sorteo").value;
@@ -63,4 +63,8 @@ function validacionDeCampos(){
     telParticipante.focus();
     return false;
   }
+
+  //Validacion del formato del celular
+  
+  
 }
